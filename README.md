@@ -5,6 +5,9 @@
 ### 첫번째 과제 - 계산기 어플리케이션 개발
 ____
 
+
+
+**사용한 문법 정리**
 1. TextFiled의 값 가져오기 : @IBOutlet
 ```
     @IBOutlet weak var Num1: UITextField! 
