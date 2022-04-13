@@ -19,37 +19,38 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvk-dX-sec">
                                 <rect key="frame" x="57" y="228" width="300" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="더하기 실행"/>
                                 <buttonConfiguration key="configuration" style="filled" title="더하기 실행"/>
                                 <connections>
-                                    <action selector="touchUpPlusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="snr-kg-XOM"/>
+                                    <action selector="touchUpOpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tus-5S-6U1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c16-Od-ObV">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c16-Od-ObV">
                                 <rect key="frame" x="57" y="275" width="300" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="빼기 실행"/>
                                 <connections>
-                                    <action selector="touchUpMinusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kko-EE-MJY"/>
+                                    <action selector="touchUpOpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5cR-rr-udk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHP-ja-Z4o">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHP-ja-Z4o">
                                 <rect key="frame" x="57" y="321" width="300" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="나누기 실행"/>
                                 <connections>
-                                    <action selector="touchUpDivButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q08-yN-wMb"/>
+                                    <action selector="touchUpOpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I12-r0-C6k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-IJ-ln5">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-IJ-ln5">
                                 <rect key="frame" x="57" y="371" width="300" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="곱셈 실행"/>
                                 <connections>
-                                    <action selector="touchUpMutiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yfb-YM-Yka"/>
+                                    <action selector="touchUpOpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QWH-b1-c9V"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="숫자 1 입력" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Z37-ij-tyE">
@@ -59,11 +60,11 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="숫자 2 입력" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="lo7-OC-FBa">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="숫자 2 입력" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="lo7-OC-FBa">
                                 <rect key="frame" x="57" y="141" width="300" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="12"/>
+                                <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="se2-2O-lnD">
@@ -78,8 +79,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="num1" destination="Z37-ij-tyE" id="LFV-00-2YU"/>
-                        <outlet property="num2" destination="lo7-OC-FBa" id="HbU-bm-oah"/>
+                        <outlet property="Num1" destination="Z37-ij-tyE" id="ACN-nj-KTT"/>
+                        <outlet property="Num2" destination="lo7-OC-FBa" id="DqI-fN-yMf"/>
                         <outlet property="resultText" destination="se2-2O-lnD" id="h3p-NN-gRJ"/>
                     </connections>
                 </viewController>
