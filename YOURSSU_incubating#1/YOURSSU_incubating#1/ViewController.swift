@@ -8,8 +8,8 @@
 import UIKit
 class ViewController: UIViewController {
     
-    @IBOutlet weak var Num1: UITextField!
-    @IBOutlet weak var Num2: UITextField!
+    @IBOutlet weak var num1: UITextField!
+    @IBOutlet weak var num2: UITextField!
     @IBOutlet weak var resultText: UILabel!
     
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
                 case 1:
                     resultText.text="\(num1)-\(num2)=\(inum1-inum2)"
                 case 2:
-                    if(inum1==0 || inum2==0){
+                    if(inum2==0){
                         resultText.text="0으로는 나눌 수 없습니다."
                     }
                     else{
