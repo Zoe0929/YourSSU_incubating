@@ -24,7 +24,7 @@ class ViewController: UIViewController {
             if num1.isEmpty || num2.isEmpty {
                 resultText.text = "값을 모두 입력해주세요."
             }
-            if let inum1 = Int(num1), let inum2 = Int(num2){
+            else if let inum1 = Int(num1), let inum2 = Int(num2){
 //                resultText.text="\(buttonId.tag)"
                 switch sender.tag{
                 case 0:
