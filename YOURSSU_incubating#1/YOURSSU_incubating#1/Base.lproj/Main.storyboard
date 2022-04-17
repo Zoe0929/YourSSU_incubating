@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,60 +13,83 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YOURSSU_incubating_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvk-dX-sec">
-                                <rect key="frame" x="57" y="228" width="300" height="31"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvk-dX-sec">
+                                <rect key="frame" x="40" y="128" width="185" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="DyD-5P-gpl"/>
+                                    <constraint firstAttribute="height" constant="31" id="Zzk-rD-u0e"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="더하기 실행"/>
                                 <connections>
                                     <action selector="touchUpOpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="isj-ei-M3K"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c16-Od-ObV">
-                                <rect key="frame" x="57" y="275" width="300" height="31"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c16-Od-ObV">
+                                <rect key="frame" x="40" y="179" width="185" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Dhd-lC-vPB"/>
+                                    <constraint firstAttribute="height" constant="31" id="N8F-pD-EBD"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="빼기 실행"/>
                                 <connections>
                                     <action selector="touchUpOpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="peT-7n-PY7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHP-ja-Z4o">
-                                <rect key="frame" x="57" y="321" width="300" height="31"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHP-ja-Z4o">
+                                <rect key="frame" x="40" y="230" width="185" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="564-AE-Fx5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="cvt-RB-YOM"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="나누기 실행"/>
                                 <connections>
                                     <action selector="touchUpOpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bhx-Vt-wCx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-IJ-ln5">
-                                <rect key="frame" x="57" y="371" width="300" height="31"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-IJ-ln5">
+                                <rect key="frame" x="40" y="281" width="185" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="6eB-Lc-J6D"/>
+                                    <constraint firstAttribute="height" constant="31" id="HAt-De-Rnk"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="곱셈 실행"/>
                                 <connections>
                                     <action selector="touchUpOpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oa9-WK-jFG"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="숫자 1 입력" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Z37-ij-tyE">
-                                <rect key="frame" x="57" y="99" width="300" height="34"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="숫자 1 입력" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Z37-ij-tyE">
+                                <rect key="frame" x="40" y="20" width="185" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="0XM-wM-uBo"/>
+                                    <constraint firstAttribute="height" constant="34" id="8wM-zA-Org"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="BQf-2g-QET"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="숫자 2 입력" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="lo7-OC-FBa">
-                                <rect key="frame" x="57" y="141" width="300" height="34"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="숫자 2 입력" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="lo7-OC-FBa">
+                                <rect key="frame" x="40" y="74" width="185" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="aZn-J9-Cd5"/>
+                                    <constraint firstAttribute="height" constant="34" id="bQl-qM-qao"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="gZa-xE-tzc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="se2-2O-lnD">
-                                <rect key="frame" x="14" y="438" width="400" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="se2-2O-lnD">
+                                <rect key="frame" x="40" y="210" width="185" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="CbB-Du-Gat"/>
+                                    <constraint firstAttribute="width" constant="300" id="f8V-tm-tHe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,10 +97,36 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="se2-2O-lnD" secondAttribute="bottom" constant="250" id="2dI-zn-ZdC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rvk-dX-sec" secondAttribute="trailing" constant="40" id="3V3-I3-uHn"/>
+                            <constraint firstItem="lo7-OC-FBa" firstAttribute="top" secondItem="Z37-ij-tyE" secondAttribute="bottom" constant="20" id="7Ld-gv-hKv"/>
+                            <constraint firstItem="Z37-ij-tyE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="BOG-2h-eUU"/>
+                            <constraint firstItem="ixF-IJ-ln5" firstAttribute="top" secondItem="sHP-ja-Z4o" secondAttribute="bottom" constant="20" id="GMo-Zi-yfe"/>
+                            <constraint firstItem="se2-2O-lnD" firstAttribute="top" secondItem="ixF-IJ-ln5" secondAttribute="bottom" constant="20" id="Hka-QG-vXL"/>
+                            <constraint firstItem="c16-Od-ObV" firstAttribute="top" secondItem="Rvk-dX-sec" secondAttribute="bottom" constant="20" id="Lm1-yK-3Ny"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c16-Od-ObV" secondAttribute="trailing" constant="40" id="My6-kD-KLM"/>
+                            <constraint firstItem="sHP-ja-Z4o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Nbz-eA-Kia"/>
+                            <constraint firstItem="ixF-IJ-ln5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="OLG-tQ-bUO"/>
+                            <constraint firstItem="c16-Od-ObV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="SnG-6h-wej"/>
+                            <constraint firstItem="se2-2O-lnD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="VeQ-xH-Siy"/>
+                            <constraint firstItem="lo7-OC-FBa" firstAttribute="width" secondItem="Z37-ij-tyE" secondAttribute="width" id="WpW-f0-gvv"/>
+                            <constraint firstItem="Z37-ij-tyE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="dR2-PZ-3EV"/>
+                            <constraint firstItem="sHP-ja-Z4o" firstAttribute="top" secondItem="c16-Od-ObV" secondAttribute="bottom" constant="20" id="eE1-g4-vZN"/>
+                            <constraint firstItem="Rvk-dX-sec" firstAttribute="top" secondItem="lo7-OC-FBa" secondAttribute="bottom" constant="20" id="hxY-y5-IlI"/>
+                            <constraint firstItem="Rvk-dX-sec" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="l8G-hs-oBh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z37-ij-tyE" secondAttribute="trailing" constant="40" id="ngb-ml-ORV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ixF-IJ-ln5" secondAttribute="trailing" constant="40" id="q2J-gr-lj2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sHP-ja-Z4o" secondAttribute="trailing" constant="40" id="rTH-0D-Gaa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="se2-2O-lnD" secondAttribute="trailing" constant="40" id="uT9-lh-DUj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lo7-OC-FBa" secondAttribute="trailing" constant="40" id="v07-YB-nSo"/>
+                            <constraint firstItem="lo7-OC-FBa" firstAttribute="height" secondItem="Z37-ij-tyE" secondAttribute="height" id="wxD-Hd-Xtn"/>
+                            <constraint firstItem="lo7-OC-FBa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="zJG-aT-Xru"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="Num1" destination="Z37-ij-tyE" id="ljr-Qj-sR8"/>
-                        <outlet property="Num2" destination="lo7-OC-FBa" id="6Nf-W8-hFF"/>
+                        <outlet property="num1TextField" destination="Z37-ij-tyE" id="HjM-p8-7BD"/>
+                        <outlet property="num2TextField" destination="lo7-OC-FBa" id="YWq-S4-D4p"/>
                         <outlet property="resultText" destination="se2-2O-lnD" id="h3p-NN-gRJ"/>
                     </connections>
                 </viewController>
