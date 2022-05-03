@@ -125,7 +125,7 @@
                     <connections>
                         <outlet property="num1TextField" destination="Z37-ij-tyE" id="HjM-p8-7BD"/>
                         <outlet property="num2TextField" destination="lo7-OC-FBa" id="YWq-S4-D4p"/>
-                        <outlet property="resultText" destination="se2-2O-lnD" id="h3p-NN-gRJ"/>
+                        <outlet property="resultTextUIlabel" destination="se2-2O-lnD" id="NWI-f2-rV5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
