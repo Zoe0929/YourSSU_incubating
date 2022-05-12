@@ -32,7 +32,9 @@ class ComposeViewController: UIViewController {
     @IBAction func save(_ sender: Any) {
         let memo = memoTextView.text
         let newMemo = Memo(content: memo ?? "" )
-        Memo.dummyMemoList.append(newMemo)
+        MemoList.dummyMemoList.append(newMemo)
+        //델리게이트, 노티피케이션 센터 이용해서 데이터 넘겨주기
+        NotificationCenter.default.post(name: ComposeViewController.newMemoDisInsert, object: nil)
         dismiss(animated: true, completion: nil)
     }
     
@@ -48,4 +50,8 @@ class ComposeViewController: UIViewController {
     }
     */
 
+}
+
+extension ComposeViewController{
+    static let newMemoDisInsert = Notification.Name(rawValue: "newMemoDidInsert")
 }

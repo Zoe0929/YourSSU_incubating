@@ -7,18 +7,21 @@
 
 import Foundation
 
-class Memo{
+struct Memo{
     var content : String
     var insertDate : Date
-     
-    //constructor
     init (content: String) {
         self.content=content
         insertDate=Date()
     }
+}
+
+class MemoList{
+     
     //dummydate
     static var dummyMemoList=[
      Memo(content: "Lorem ipsum"),
      Memo(content: "Dolar Amet")
     ]
 }
+//싱글톤 패턴 
