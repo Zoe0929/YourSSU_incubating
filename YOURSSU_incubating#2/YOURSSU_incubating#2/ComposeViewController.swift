@@ -16,10 +16,12 @@ class ComposeViewController: UIViewController {
 
     
     @IBOutlet weak var memoTextView: UITextView!
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       // UINavigationBar.appearance().barTintColor=UIColor.systemGray2
 
         // Do any additional setup after loading the view.
     }
