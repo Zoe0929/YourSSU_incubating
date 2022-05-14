@@ -12,7 +12,7 @@ import UIKit
 
 
 let textViewPlaceHolder = "내용 입력"
-class ComposeViewController: UIViewController, UITextViewDelegate {
+class ComposeViewController: UIViewController {
 
  
 
@@ -68,7 +68,7 @@ extension ComposeViewController{
     static let newMemoDisInsert = Notification.Name(rawValue: "newMemoDidInsert")
 }
 
-extension ViewController: UITextViewDelegate {
+extension ComposeViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == textViewPlaceHolder {
             textView.text = nil

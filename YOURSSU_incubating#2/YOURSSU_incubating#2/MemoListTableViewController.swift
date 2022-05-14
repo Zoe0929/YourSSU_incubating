@@ -35,7 +35,6 @@ class MemoListTableViewController : UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         token=NotificationCenter.default.addObserver(forName: ComposeViewController.newMemoDisInsert, object: nil, queue: OperationQueue.main){
             [weak self] (noti) in self?.tableView.reloadData()
         }
@@ -46,12 +45,16 @@ class MemoListTableViewController : UITableViewController, UITextFieldDelegate {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
     // MARK: - Table view data source
 
     //메모 리스트에 표시될 항목의 개수 전달
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if MemoList.shared.dummyMemoList.count == 0 {
+            self.tableView.setEmptyMessage("메모가 없습니다.")
+        } else {
+            self.tableView.restore()
+        }
         return MemoList.shared.dummyMemoList.count
     }
 
@@ -110,4 +113,22 @@ class MemoListTableViewController : UITableViewController, UITextFieldDelegate {
     }
     */
 
+}
+extension UITableView{
+    func setEmptyMessage(_ message: String){
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+           messageLabel.text = message
+           messageLabel.textColor = .black
+           messageLabel.numberOfLines = 0
+           messageLabel.textAlignment = .center
+           messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
+           messageLabel.sizeToFit()
+
+           self.backgroundView = messageLabel
+           self.separatorStyle = .none
+    }
+    func restore() {
+         self.backgroundView = nil
+         self.separatorStyle = .singleLine
+     }
 }
