@@ -9,15 +9,7 @@ import UIKit
 
 class MemoListTableViewController : UITableViewController, UITextFieldDelegate {
     
-    //날짜 표시 포멧 설정
-    let formatter : DateFormatter={
-        let f = DateFormatter()
-        f.dateStyle = .long
-        f.timeStyle = .none
-        f.locale = Locale(identifier: "Ko_kr")
-        return f
-    }()
-    
+  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -31,9 +23,18 @@ class MemoListTableViewController : UITableViewController, UITextFieldDelegate {
             NotificationCenter.default.removeObserver(token)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell){
+            if let vc = segue.destination as? DetailViewController{
+                vc.memo=MemoList.shared.dummyMemoList[indexPath.row]
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         token=NotificationCenter.default.addObserver(forName: ComposeViewController.newMemoDisInsert, object: nil, queue: OperationQueue.main){
             [weak self] (noti) in self?.tableView.reloadData()
@@ -51,18 +52,16 @@ class MemoListTableViewController : UITableViewController, UITextFieldDelegate {
     //메모 리스트에 표시될 항목의 개수 전달
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return MemoList.dummyMemoList.count
+        return MemoList.shared.dummyMemoList.count
     }
 
     //표시될 데이터 전달
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        let target = MemoList.dummyMemoList[indexPath.row]
-        cell.textLabel?.text=target.content
-        //포멧 적용
-        cell.detailTextLabel?.text=formatter.string(from: target.insertDate)
-
+        let target = MemoList.shared.dummyMemoList[indexPath.row]
+        cell.textLabel?.text=target.title
+        cell.detailTextLabel?.text = target.subTitle
         return cell
     }
 

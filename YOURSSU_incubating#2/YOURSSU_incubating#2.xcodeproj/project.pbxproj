@@ -19,6 +19,7 @@
 		360F8AC52828CBDB00655DD7 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360F8AC42828CBDB00655DD7 /* MemoListTableViewController.swift */; };
 		360F8AC72828CC2100655DD7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360F8AC62828CC2100655DD7 /* Model.swift */; };
 		360F8AC92828E5CF00655DD7 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360F8AC82828E5CF00655DD7 /* ComposeViewController.swift */; };
+		36E5DD97282E4C1400825DF1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E5DD96282E4C1400825DF1 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		360F8AC42828CBDB00655DD7 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		360F8AC62828CC2100655DD7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		360F8AC82828E5CF00655DD7 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		36E5DD96282E4C1400825DF1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				360F8AC42828CBDB00655DD7 /* MemoListTableViewController.swift */,
 				360F8AC62828CC2100655DD7 /* Model.swift */,
 				360F8AC82828E5CF00655DD7 /* ComposeViewController.swift */,
+				36E5DD96282E4C1400825DF1 /* DetailViewController.swift */,
 			);
 			path = "YOURSSU_incubating#2";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				360F8AC92828E5CF00655DD7 /* ComposeViewController.swift in Sources */,
 				360F8A932828A2FF00655DD7 /* AppDelegate.swift in Sources */,
 				360F8A952828A2FF00655DD7 /* SceneDelegate.swift in Sources */,
+				36E5DD97282E4C1400825DF1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

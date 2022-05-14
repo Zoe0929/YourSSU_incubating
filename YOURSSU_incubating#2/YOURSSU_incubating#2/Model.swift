@@ -8,20 +8,19 @@
 import Foundation
 
 struct Memo{
-    var content : String
-    var insertDate : Date
-    init (content: String) {
-        self.content=content
-        insertDate=Date()
+    var title : String
+    var subTitle : String
+    init (title: String, content: String) {
+        self.title=title
+        self.subTitle=content
     }
 }
 
 class MemoList{
-     
-    //dummydate
-    static var dummyMemoList=[
-     Memo(content: "Lorem ipsum"),
-     Memo(content: "Dolar Amet")
-    ]
+    static let shared = MemoList()
+    //dummydata
+    var dummyMemoList : [Memo] = []
+    private init () {}
+    
 }
 //싱글톤 패턴 
