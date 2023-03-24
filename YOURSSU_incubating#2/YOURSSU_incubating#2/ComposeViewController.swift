@@ -11,14 +11,22 @@ import UIKit
 
 
 
+<<<<<<< HEAD
 
+=======
+let textViewPlaceHolder = "내용 입력"
+>>>>>>> incubating#2
 class ComposeViewController: UIViewController {
 
  
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var memoTextView: UITextView!
+<<<<<<< HEAD
     let textViewPlaceHolder = "내용 입력"
+=======
+    
+>>>>>>> incubating#2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +34,10 @@ class ComposeViewController: UIViewController {
         //
         titleTextField.placeholder="제목 입력"
         memoTextView.text=textViewPlaceHolder
+<<<<<<< HEAD
         memoTextView.textColor = .lightGray
+=======
+>>>>>>> incubating#2
         
         
         
@@ -34,6 +45,13 @@ class ComposeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+<<<<<<< HEAD
+=======
+    //close버튼 동작
+//    @IBAction func Close(_ sender: Any) {
+//        [self .dismiss(animated: true, completion: nil)];
+//    }
+>>>>>>> incubating#2
     
     //save 버튼 동작
     @IBAction func save(_ sender: Any) {

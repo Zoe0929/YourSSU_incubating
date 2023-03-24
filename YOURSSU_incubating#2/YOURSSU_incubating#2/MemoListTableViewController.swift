@@ -16,6 +16,16 @@ class MemoListTableViewController : UITableViewController, UITextFieldDelegate {
         print(#function)
     }
     
+<<<<<<< HEAD
+=======
+    var token : NSObjectProtocol?
+    
+    deinit{
+        if let token = token {
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
+>>>>>>> incubating#2
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell){
@@ -27,6 +37,7 @@ class MemoListTableViewController : UITableViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         let appearance = UINavigationBarAppearance()
         appearance.configureWithTransparentBackground()
         appearance.backgroundColor = UIColor.systemBlue
@@ -43,13 +54,28 @@ class MemoListTableViewController : UITableViewController, UITextFieldDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         
+=======
+        
+        token=NotificationCenter.default.addObserver(forName: ComposeViewController.newMemoDisInsert, object: nil, queue: OperationQueue.main){
+            [weak self] (noti) in self?.tableView.reloadData()
+        }
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+>>>>>>> incubating#2
     }
     // MARK: - Table view data source
 
     //메모 리스트에 표시될 항목의 개수 전달
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+<<<<<<< HEAD
         //데이터가 없을 때 메시지 띄우기 (Empty view)
+=======
+>>>>>>> incubating#2
         if MemoList.shared.dummyMemoList.count == 0 {
             self.tableView.setEmptyMessage("메모가 없습니다.")
         } else {
