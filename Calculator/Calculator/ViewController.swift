@@ -93,11 +93,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        configue()
-        addTargetsOnButton()
+        setLayouts()
+        registerTarget()
     }
     
-    private func configue(){
+    private func setLayouts() {
+            setViewHierarchy()
+            setConstraints()
+    }
+    
+    private func setViewHierarchy(){
         view.addSubview(firstInputTextField)
         view.addSubview(secondInputTextField)
         view.addSubview(resultLabel)
@@ -105,54 +110,57 @@ class ViewController: UIViewController {
         view.addSubview(minusButton)
         view.addSubview(multipleButton)
         view.addSubview(dividedButton)
+    }
+    
+    private func setConstraints(){
+        let safeArea = view.safeAreaLayoutGuide
         
         firstInputTextField.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(157)
-            $0.leading.trailing.equalToSuperview().inset(leadingTrailingMargin)
+            $0.top.equalTo(safeArea).offset(157)
+            $0.leading.trailing.equalTo(safeArea).inset(leadingTrailingMargin)
             
         }
         
         secondInputTextField.snp.makeConstraints{
             $0.top.equalTo(firstInputTextField.snp.bottom).offset(sameComponentmargin)
-            $0.leading.trailing.equalToSuperview().inset(leadingTrailingMargin)
+            $0.leading.trailing.equalTo(safeArea).inset(leadingTrailingMargin)
         }
         
         resultLabel.snp.makeConstraints{
             $0.top.equalTo(secondInputTextField.snp.bottom).offset(diffComponentmargin)
-            $0.leading.trailing.equalToSuperview().inset(leadingTrailingMargin)
+            $0.leading.trailing.equalTo(safeArea).inset(leadingTrailingMargin)
         }
         
         plusButton.snp.makeConstraints{
             $0.top.equalTo(resultLabel.snp.bottom).offset(diffComponentmargin)
-            $0.leading.trailing.equalToSuperview().inset(leadingTrailingMargin)
+            $0.leading.trailing.equalTo(safeArea).inset(leadingTrailingMargin)
         }
         
         minusButton.snp.makeConstraints{
             $0.top.equalTo(plusButton.snp.bottom).offset(sameComponentmargin)
-            $0.leading.trailing.equalToSuperview().inset(leadingTrailingMargin)
+            $0.leading.trailing.equalTo(safeArea).inset(leadingTrailingMargin)
         }
         
         multipleButton.snp.makeConstraints{
             $0.top.equalTo(minusButton.snp.bottom).offset(sameComponentmargin)
-            $0.leading.trailing.equalToSuperview().inset(leadingTrailingMargin)
+            $0.leading.trailing.equalTo(safeArea).inset(leadingTrailingMargin)
         }
         
         dividedButton.snp.makeConstraints{
             $0.top.equalTo(multipleButton.snp.bottom).offset(sameComponentmargin)
-            $0.leading.trailing.equalToSuperview().inset(leadingTrailingMargin)
+            $0.leading.trailing.equalTo(safeArea).inset(leadingTrailingMargin)
         }
         
                 
     }
     
-    private func addTargetsOnButton() {
+    private func registerTarget() {
            [plusButton, minusButton, multipleButton, dividedButton].forEach {
-               $0.addTarget(self, action: #selector(tapButton(_:)), for: .touchUpInside)
+               $0.addTarget(self, action: #selector(buttonDidTap(_:)), for: .touchUpInside)
            }
        }
     
-    @objc func tapButton(_ button: UIButton) throws {
-        print("버튼 탭")
+    @objc func buttonDidTap(_ button: UIButton) throws {
         var resultText = ""
         do{
             guard let text1 = firstInputTextField.text, let text2 = secondInputTextField.text else{
