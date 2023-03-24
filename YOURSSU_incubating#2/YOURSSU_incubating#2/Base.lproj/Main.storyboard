@@ -50,7 +50,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="메모 목록" id="OV4-8c-8pA">
+<<<<<<< HEAD
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" changesSelectionAsPrimaryAction="YES" id="qzc-BS-kHk">
+=======
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qzc-BS-kHk">
+>>>>>>> incubating#2
                             <connections>
                                 <segue destination="Evd-6x-FOv" kind="push" id="W2H-pr-ocd"/>
                             </connections>

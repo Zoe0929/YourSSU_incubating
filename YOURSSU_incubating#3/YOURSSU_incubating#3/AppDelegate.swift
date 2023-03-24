@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  YOURSSU_incubating#2
+//  YOURSSU_incubating#3
 //
-//  Created by 지희의 MAC on 2022/05/09.
+//  Created by 지희의 MAC on 2022/05/14.
 //
 
 import UIKit
@@ -14,10 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-<<<<<<< HEAD
-=======
-        
->>>>>>> incubating#2
         return true
     }
 
