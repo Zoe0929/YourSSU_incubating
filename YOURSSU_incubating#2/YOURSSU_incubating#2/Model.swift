@@ -21,6 +21,11 @@ class MemoList{
     //dummydata
     var dummyMemoList : [Memo] = []
     private init () {}
+<<<<<<< HEAD
 }
 
+=======
+    
+}
+>>>>>>> incubating#2
 //싱글톤 패턴 
