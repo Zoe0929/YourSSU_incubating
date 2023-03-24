@@ -13,6 +13,8 @@
 		36878AF829CD6966007F6DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36878AF729CD6966007F6DE5 /* Assets.xcassets */; };
 		36878AFB29CD6966007F6DE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36878AF929CD6966007F6DE5 /* LaunchScreen.storyboard */; };
 		36878B0529CD74D3007F6DE5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36878B0429CD74D3007F6DE5 /* SnapKit */; };
+		36E8594E29CDD58500D3CA7D /* CalculateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E8594D29CDD58500D3CA7D /* CalculateButton.swift */; };
+		36E8595029CDD8FC00D3CA7D /* InputUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E8594F29CDD8FC00D3CA7D /* InputUITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +38,8 @@
 		36878AF729CD6966007F6DE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36878AFA29CD6966007F6DE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36878AFC29CD6966007F6DE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36E8594D29CDD58500D3CA7D /* CalculateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButton.swift; sourceTree = "<group>"; };
+		36E8594F29CDD8FC00D3CA7D /* InputUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputUITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				36878AEE29CD6964007F6DE5 /* AppDelegate.swift */,
 				36878AF029CD6964007F6DE5 /* SceneDelegate.swift */,
 				36878AF229CD6964007F6DE5 /* ViewController.swift */,
+				36E8594F29CDD8FC00D3CA7D /* InputUITextField.swift */,
+				36E8594D29CDD58500D3CA7D /* CalculateButton.swift */,
 				36878AF729CD6966007F6DE5 /* Assets.xcassets */,
 				36878AF929CD6966007F6DE5 /* LaunchScreen.storyboard */,
 				36878AFC29CD6966007F6DE5 /* Info.plist */,
@@ -165,7 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				36878AF329CD6964007F6DE5 /* ViewController.swift in Sources */,
+				36E8595029CDD8FC00D3CA7D /* InputUITextField.swift in Sources */,
 				36878AEF29CD6964007F6DE5 /* AppDelegate.swift in Sources */,
+				36E8594E29CDD58500D3CA7D /* CalculateButton.swift in Sources */,
 				36878AF129CD6964007F6DE5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

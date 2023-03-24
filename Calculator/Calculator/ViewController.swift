@@ -10,26 +10,8 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-    let firstInputTextField : UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "첫번째 숫자를 입력해주세요"
-        textField.backgroundColor = .systemGray6
-        textField.keyboardType = UIKeyboardType.numberPad
-        textField.borderStyle = .roundedRect
-        textField.clearButtonMode = .always
-        
-        return textField
-    }()
-    let secondInputTextField : UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "두번째 숫자를 입력해주세요"
-        textField.backgroundColor = .systemGray6
-        textField.keyboardType = UIKeyboardType.numberPad
-        textField.borderStyle = .roundedRect
-        textField.clearButtonMode = .always
-        
-        return textField
-    }()
+    let firstInputTextField : UITextField = InputTextField("첫번째")
+    let secondInputTextField : UITextField = InputTextField("두번째")
     
     let resultLabel: UILabel = {
         let label = UILabel()
@@ -39,52 +21,10 @@ class ViewController: UIViewController {
         return label
     }()
     
-    let plusButton : UIButton = {
-        let button = UIButton()
-            
-        button.setTitle("더하기", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemTeal
-        button.layer.cornerRadius = 15
-        button.translatesAutoresizingMaskIntoConstraints = false
-            
-        return button
-    }()
-    
-    let minusButton : UIButton = {
-        let button = UIButton()
-            
-        button.setTitle("빼기", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemTeal
-        button.layer.cornerRadius = 15
-        button.translatesAutoresizingMaskIntoConstraints = false
-            
-        return button
-    }()
-    
-    let multipleButton : UIButton = {
-        let button = UIButton()
-            
-        button.setTitle("곱하기", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemTeal
-        button.layer.cornerRadius = 15
-        button.translatesAutoresizingMaskIntoConstraints = false
-            
-        return button
-    }()
-    let dividedButton : UIButton = {
-        let button = UIButton()
-            
-        button.setTitle("나누기", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemTeal
-        button.layer.cornerRadius = 15
-        button.translatesAutoresizingMaskIntoConstraints = false
-            
-        return button
-    }()
+    let plusButton : UIButton = CalculateButton("더하기")
+    let minusButton : UIButton = CalculateButton("빼기")
+    let multipleButton : UIButton = CalculateButton("곱하기")
+    let dividedButton : UIButton = CalculateButton("나누기")
     
     let sameComponentmargin = 10
     let diffComponentmargin = 20
