@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     let sameComponentmargin = 10
     let diffComponentmargin = 20
     let leadingTrailingMargin = 47
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -38,8 +38,8 @@ class ViewController: UIViewController {
     }
     
     private func setLayouts() {
-            setViewHierarchy()
-            setConstraints()
+        setViewHierarchy()
+        setConstraints()
     }
     
     private func setViewHierarchy(){
@@ -91,14 +91,14 @@ class ViewController: UIViewController {
             $0.leading.trailing.equalTo(safeArea).inset(leadingTrailingMargin)
         }
         
-                
+        
     }
     
     private func registerTarget() {
-           [plusButton, minusButton, multipleButton, dividedButton].forEach {
-               $0.addTarget(self, action: #selector(buttonDidTap(_:)), for: .touchUpInside)
-           }
-       }
+        [plusButton, minusButton, multipleButton, dividedButton].forEach {
+            $0.addTarget(self, action: #selector(buttonDidTap(_:)), for: .touchUpInside)
+        }
+    }
     
     @objc func buttonDidTap(_ button: UIButton) throws {
         var resultText = ""
@@ -116,28 +116,31 @@ class ViewController: UIViewController {
             }
             switch button{
             case plusButton:
-                resultText = "\(num1)+\(num2) = \(num1+num2)"
+                if num1+num2 < Int.max {
+                    resultText = "\(num1)+\(num2) = \(num1+num2)"}
             case minusButton:
-                resultText = "\(num1)-\(num2) = \(num1-num2)"
+                if num1-num2 < Int.max {
+                    resultText = "\(num1)-\(num2) = \(num1-num2)"}
             case multipleButton:
-                resultText = "\(num1)X\(num2) = \(num1*num2)"
+                if num1*num2 < Int.max || num1*num2 > Int.min {
+                    resultText = "\(num1)X\(num2) = \(num1*num2)"}
             case dividedButton:
-                if num1 == 0 {throw ErrorMessage.divideByZero}
+                if num2 == 0 {throw ErrorMessage.divideByZero}
                 resultText = "\(num1)/\(num2) = \(num1/num2)"
             default:
                 throw ErrorMessage.unknown
             }
             
         }
-            catch ErrorMessage.unknown {
-               resultText = ErrorMessage.unknown.rawValue
-            } catch ErrorMessage.emptyInput {
-                resultText = ErrorMessage.emptyInput.rawValue
-            } catch ErrorMessage.invaildInput {
-                resultText = ErrorMessage.invaildInput.rawValue
-            } catch ErrorMessage.divideByZero {
-                resultText = ErrorMessage.divideByZero.rawValue
-            }
+        catch ErrorMessage.unknown {
+            resultText = ErrorMessage.unknown.rawValue
+        } catch ErrorMessage.emptyInput {
+            resultText = ErrorMessage.emptyInput.rawValue
+        } catch ErrorMessage.invaildInput {
+            resultText = ErrorMessage.invaildInput.rawValue
+        } catch ErrorMessage.divideByZero {
+            resultText = ErrorMessage.divideByZero.rawValue
+        }
         resultLabel.text = resultText
         
     }
@@ -145,10 +148,10 @@ class ViewController: UIViewController {
     enum ErrorMessage: String, Error{
         case emptyInput = "숫자를 모두 입력해주세요"
         case invaildInput = "올바르지 않은 입력입니다."
-        case divideByZero = "0은 나눌 수 없습니다."
+        case divideByZero = "0으로 나눌 수 없습니다."
         case unknown = "알 수 없는 오류입니다."
     }
-
-
+    
+    
 }
 
