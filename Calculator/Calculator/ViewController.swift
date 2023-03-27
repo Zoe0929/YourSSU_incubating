@@ -111,19 +111,17 @@ class ViewController: UIViewController {
                 throw ErrorMessage.emptyInput
             }
             
-            guard let num1 = Int(text1), let num2 = Int(text2) else {
+            guard let num1 = Int64(text1), let num2 = Int64(text2) else {
                 throw ErrorMessage.invaildInput
             }
             switch button{
             case plusButton:
-                if num1+num2 < Int.max {
-                    resultText = "\(num1)+\(num2) = \(num1+num2)"}
+                resultText = "\(num1)+\(num2) = \(num1+num2)"
             case minusButton:
-                if num1-num2 < Int.max {
-                    resultText = "\(num1)-\(num2) = \(num1-num2)"}
+                resultText = "\(num1)-\(num2) = \(num1-num2)"
             case multipleButton:
-                if num1*num2 < Int.max || num1*num2 > Int.min {
-                    resultText = "\(num1)X\(num2) = \(num1*num2)"}
+                if num1*num2 > Int64.max {throw ErrorMessage.unknown}
+                resultText = "\(num1)X\(num2) = \(num1*num2)"
             case dividedButton:
                 if num2 == 0 {throw ErrorMessage.divideByZero}
                 resultText = "\(num1)/\(num2) = \(num1/num2)"
